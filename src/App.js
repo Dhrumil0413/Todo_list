@@ -7,7 +7,7 @@ import {Todos} from './MyComponents/Todos.js';
 function App() {
   return (
     <div className="App">
-      <Navbar isSearchBar = {true} />
+      <Navbar isSearchBar = {true}  NavName="ToDoc" />
       <Todos />
       <Footer />
     </div>
