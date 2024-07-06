@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Navbar = (props) => {
   return (
@@ -32,10 +33,12 @@ export const Navbar = (props) => {
                 <a className="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            {
+              props.isSearchBar ? <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> : ""
+            }
           </div>
         </div>
       </nav>
@@ -43,5 +46,14 @@ export const Navbar = (props) => {
   )
 }
 
+Navbar.propTypes = {
+  NavName: PropTypes.string.isRequired,
+  isSearchBar: PropTypes.bool.isRequired
+}
+
+// Navbar.defaultProps = {
+//   NavName: "ToDoc",
+//   isSearchBar: true
+// }
 
 export default Navbar;
