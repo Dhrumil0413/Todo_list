@@ -40,5 +40,34 @@
 
 .container1 {
   width: 100%;
-  border-radius: 1px solide black;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  margin-bottom: 2em
 }
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1em 2em 1em 2em;
+}
+
+.sub-container > h5,
+.sub-container > p {
+  width: 100%; 
+  text-align: left; 
+}
+
+.sub-container > button {
+  align-self: flex-start; 
+}
+
+footer {
+  position: relative; 
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+  
